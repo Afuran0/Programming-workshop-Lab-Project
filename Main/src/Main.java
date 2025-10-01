@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.*;
+import java.util.ArrayList;
 public class Main{
 
     public static void main(String[] args) throws IOException {
@@ -8,10 +9,16 @@ public class Main{
         File text = new File(path);
 
         Scanner sc = new Scanner(text);
+        ArrayList<String> article;
+        article = new ArrayList<>();
 
+        int i = 0;
         while (sc.hasNextLine()) {
-            System.out.println(sc.nextLine());
-
+            article.add(sc.nextLine());
+            i++;
+        }
+        for (String j : article) {
+            System.out.println(j);
         }
 
     }
