@@ -10,7 +10,7 @@ public class Main{
 
         Proccessor p1 = new Proccessor("C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt");
         p1.printArticle();
-
-
+        Proccessor article1 = new Proccessor("C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt");
+        article1.printArticle();
     }
 }
