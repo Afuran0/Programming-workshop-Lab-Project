@@ -18,19 +18,49 @@ class Proccessor {
         Scanner sc = new Scanner(text);
         int i = 0;
         while (sc.hasNextLine()) {
-            article.add(sc.nextLine());
-            i++;
+            String line = sc.nextLine();
+            String[] words = line.split("\\s+");
+            for (String word : words) {
+                article.add(word.toLowerCase());
+            }
         }
+        sc.close();
 
 
         //turns stopwords into arrayList
         File stop = new File(stopFile);
         Scanner s = new Scanner(stop);
-        i = 0;
-        while (sc.hasNextLine()) {
-            stopwords.add(s.nextLine());
-            i++;
+
+        while (s.hasNextLine()) {
+            String line = s.nextLine();
+            String[] words = line.split("\\s+");
+            for (String word : words) {
+                stopwords.add(word.toLowerCase());
+            }
         }
+        s.close();
+
+        int index = 0;
+        while(index < article.size()){
+            String articleWord = article.get(index);
+            if(articleWord.equals(stopwords.get(1))){
+                System.out.println(articleWord);
+
+            }
+            index ++;
+        }
+
+        /*
+        //this works but idk if he wants it done this way
+        for (String articleWord : article) {
+            if (stopwords.contains(articleWord)) {
+                System.out.println(articleWord);
+            }
+
+        }
+
+*/
+
 
 
     }
@@ -40,14 +70,10 @@ class Proccessor {
             System.out.println(j);
         }
     }
-
-    public void removeStopWords(){
-        for(String i: article){
-            for (String j: stopwords){
-                if (i == j){
-                    System.out.println(i);
-                }
-            }
+    public void printStopwords(){
+        for (String k : stopwords) {
+            System.out.println(k);
         }
     }
+
 }

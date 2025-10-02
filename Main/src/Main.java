@@ -8,8 +8,5 @@ public class Main{
         String file = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
 
         Proccessor p1 = new Proccessor(file);
-        //p1.printArticle();
-        p1.removeStopWords();
-
     }
 }
