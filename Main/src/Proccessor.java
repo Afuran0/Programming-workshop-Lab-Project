@@ -5,7 +5,7 @@ import java.util.ArrayList;
 class Proccessor {
     private ArrayList<String> article;
     private ArrayList<String> stopwords;
-    private String stopFile = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
+    private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
     private String file;
 
     public Proccessor(String file) throws IOException{
@@ -13,24 +13,23 @@ class Proccessor {
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
 
-        //turns file into arrayList
+        //turns article file into arrayList
         File text = new File(file);
-        Scanner sc = new Scanner(text);
+        Scanner aS = new Scanner(text);
         int i = 0;
-        while (sc.hasNextLine()) {
-            String line = sc.nextLine();
+        while (aS.hasNextLine()) {
+            String line = aS.nextLine();
             String[] words = line.split("\\s+");
             for (String word : words) {
                 article.add(word.toLowerCase());
             }
         }
-        sc.close();
+        aS.close();
 
 
-        //turns stopwords into arrayList
-        File stop = new File(stopFile);
+        //turns stopword file into arrayList
+        File stop = new File(STOPFILENAME);
         Scanner s = new Scanner(stop);
-
         while (s.hasNextLine()) {
             String line = s.nextLine();
             String[] words = line.split("\\s+");
@@ -40,12 +39,14 @@ class Proccessor {
         }
         s.close();
 
+
+
+        //searches article for stopwords
         int index = 0;
         while(index < article.size()){
             String articleWord = article.get(index);
             if(articleWord.equals(stopwords.get(1))){
                 System.out.println(articleWord);
-
             }
             index ++;
         }
@@ -64,13 +65,14 @@ class Proccessor {
 
 
     }
-
+    //function to print out the current article list
     public void printArticle(){
         for (String j : article) {
             System.out.println(j);
         }
     }
-    public void printStopwords(){
+    //Test Function to print stopwords
+    public void printStopWords(){
         for (String k : stopwords) {
             System.out.println(k);
         }

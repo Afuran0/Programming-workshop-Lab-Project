@@ -5,8 +5,8 @@ public class Main{
 
     public static void main(String[] args) throws IOException {
 
-        String file = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
+        String filename = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
 
-        Proccessor p1 = new Proccessor(file);
+        Proccessor p1 = new Proccessor(filename);
     }
 }
