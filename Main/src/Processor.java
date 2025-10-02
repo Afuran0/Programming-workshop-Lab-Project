@@ -2,13 +2,13 @@ import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
 
-class Proccessor {
+class Processor {
     private ArrayList<String> article;
     private ArrayList<String> stopwords;
     private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
     private String file;
 
-    public Proccessor(String file) throws IOException{
+    public Processor(String file) throws IOException{
         this.file = file;
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
