@@ -1,6 +1,6 @@
-import java.util.Scanner;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 class Processor {
     private ArrayList<String> article;
@@ -8,74 +8,37 @@ class Processor {
     private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
     private String file;
 
-    public Processor(String file) throws IOException{
+    public Processor(String file) throws IOException {
         this.file = file;
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
 
-        //turns article file into arrayList
-        File text = new File(file);
-        Scanner aS = new Scanner(text);
-        int i = 0;
-        while (aS.hasNextLine()) {
-            String line = aS.nextLine();
-            String[] words = line.split("\\s+");
-            for (String word : words) {
-                article.add(word.toLowerCase());
-            }
-        }
-        aS.close();
+        // from the FiletoList class it takes the articleList to use here
+        FileToList fileReader = new FileToList();
+        article = fileReader.readFileToList(file);
+        stopwords = fileReader.readFileToList(STOPFILENAME);
 
-
-        //turns stopword file into arrayList
-        File stop = new File(STOPFILENAME);
-        Scanner s = new Scanner(stop);
-        while (s.hasNextLine()) {
-            String line = s.nextLine();
-            String[] words = line.split("\\s+");
-            for (String word : words) {
-                stopwords.add(word.toLowerCase());
-            }
-        }
-        s.close();
-
-
-
-        //searches article for stopwords
-        int index = 0;
-        while(index < article.size()){
-            String articleWord = article.get(index);
-            if(articleWord.equals(stopwords.get(1))){
-                System.out.println(articleWord);
-            }
-            index ++;
-        }
-
-        /*
-        //this works but idk if he wants it done this way
-        for (String articleWord : article) {
+        // removes stop words from article
+        Iterator<String> iterator = article.iterator();
+        while (iterator.hasNext()) {
+            String articleWord = iterator.next();
             if (stopwords.contains(articleWord)) {
-                System.out.println(articleWord);
+                iterator.remove();
             }
-
         }
-
-*/
-
-
-
     }
-    //function to print out the current article list
-    public void printArticle(){
+
+    // Print out the current article list
+    public void printArticle() {
         for (String j : article) {
-            System.out.println(j);
+            System.out.printf(j + " ");
         }
     }
-    //Test Function to print stopwords
-    public void printStopWords(){
+
+    // Test function to print stopwords
+    public void printStopWords() {
         for (String k : stopwords) {
             System.out.println(k);
         }
     }
-
 }
