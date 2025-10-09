@@ -28,12 +28,16 @@ class Processor {
         }
     }
 
-    // Print out the current article list
-    public void printArticle() {
-        for (String j : article) {
-            System.out.printf(j + " ");
-        }
+// Print out the current article list
+public void printArticle() {
+    for (String j : article) {
+        System.out.printf(j + " ");
     }
+}
+
+public ArrayList<String> getArticleWords() {
+    return article;
+}
 
     // Test function to print stopwords
     public void printStopWords() {
