@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 
 public class Main {
 
@@ -14,5 +15,9 @@ public class Main {
         // Calculate and display statistics
         Statistics stats = new Statistics(p1.getArticleWords());
         stats.printStats();
+
+        // Rank words by frequency
+        WordFrequency wf = new WordFrequency(p1.getArticleWords());
+        wf.printTopWords(10);
     }
 }
