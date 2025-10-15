@@ -30,32 +30,31 @@ class Processor {
         statistics(article);
     }
 
+
+
+    //Method in processor that outputs wordcount, uniqueword count, and lists by frequency
     public void statistics (ArrayList<String> wordsInArticle){
         ArrayList<String> uniqueWords = new ArrayList<>();
         ArrayList<Integer> wordCounts = new ArrayList<>();
 
         // Loop through each word and count its frequency
         for(String word : wordsInArticle) {
-            int index = uniqueWords.indexOf(word); // -1 if it never occurs
-            if (index != -1) { //
-                // If the word exists in uniqueWords, increment the count
+            int index = uniqueWords.indexOf(word);
+            if (index != -1) {
                 wordCounts.set(index, wordCounts.get(index) + 1);
             } else {
-                // If the word is not found, add it to uniqueWords and set its count to 1
                 uniqueWords.add(word);
                 wordCounts.add(1);
             }
         }
-        // Sort both lists (words and counts) in descending order of counts using Bubble Sort
+        // Sorts words by frequencies
         for (int i = 0; i < wordCounts.size() - 1; i++) {
             for (int j = 0; j < wordCounts.size() - i - 1; j++) {
                 if (wordCounts.get(j) < wordCounts.get(j + 1)) {
-                    // Swap counts
                     int tempCount = wordCounts.get(j);
                     wordCounts.set(j, wordCounts.get(j + 1));
                     wordCounts.set(j + 1, tempCount);
 
-                    // Swap corresponding words
                     String tempWord = uniqueWords.get(j);
                     uniqueWords.set(j, uniqueWords.get(j + 1));
                     uniqueWords.set(j + 1, tempWord);
@@ -63,10 +62,18 @@ class Processor {
             }
         }
 
-        // Print the words ranked by frequency
-        System.out.println("Word Ranking by Frequency:");
+        //Prints the count of words in an article
+        int wordCount = article.size();
+        System.out.println("Word count: " + wordCount);
+
+        //Prints the amount of uniqueWords
+        int uniqueWordCount = uniqueWords.size();
+        System.out.println("Count of unique words: " + uniqueWordCount);
+
+        // Prints words ranked by frequency
+        System.out.println("Frequency of each word: ");
         for (int i = 0; i < uniqueWords.size(); i++) {
-            System.out.println(uniqueWords.get(i) + ": " + wordCounts.get(i));
+            System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));
         }
     }
 
