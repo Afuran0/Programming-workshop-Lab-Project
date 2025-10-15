@@ -32,7 +32,7 @@ class Processor {
 
 
 
-    //Method in processor that outputs wordcount, uniqueword count, and lists by frequency
+    //Method in processor that outputs word-count, unique word-count, and lists by frequency
     public void statistics (ArrayList<String> wordsInArticle){
         ArrayList<String> uniqueWords = new ArrayList<>();
         ArrayList<Integer> wordCounts = new ArrayList<>();
