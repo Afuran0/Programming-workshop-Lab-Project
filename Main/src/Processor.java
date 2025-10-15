@@ -26,12 +26,61 @@ class Processor {
                 iterator.remove();
             }
         }
+
+        statistics(article);
     }
+
+    public void statistics (ArrayList<String> wordsInArticle){
+        ArrayList<String> uniqueWords = new ArrayList<>();
+        ArrayList<Integer> wordCounts = new ArrayList<>();
+
+        // Loop through each word and count its frequency
+        for(String word : wordsInArticle) {
+            int index = uniqueWords.indexOf(word); // -1 if it never occurs
+            if (index != -1) { //
+                // If the word exists in uniqueWords, increment the count
+                wordCounts.set(index, wordCounts.get(index) + 1);
+            } else {
+                // If the word is not found, add it to uniqueWords and set its count to 1
+                uniqueWords.add(word);
+                wordCounts.add(1);
+            }
+        }
+        // Sort both lists (words and counts) in descending order of counts using Bubble Sort
+        for (int i = 0; i < wordCounts.size() - 1; i++) {
+            for (int j = 0; j < wordCounts.size() - i - 1; j++) {
+                if (wordCounts.get(j) < wordCounts.get(j + 1)) {
+                    // Swap counts
+                    int tempCount = wordCounts.get(j);
+                    wordCounts.set(j, wordCounts.get(j + 1));
+                    wordCounts.set(j + 1, tempCount);
+
+                    // Swap corresponding words
+                    String tempWord = uniqueWords.get(j);
+                    uniqueWords.set(j, uniqueWords.get(j + 1));
+                    uniqueWords.set(j + 1, tempWord);
+                }
+            }
+        }
+
+        // Print the words ranked by frequency
+        System.out.println("Word Ranking by Frequency:");
+        for (int i = 0; i < uniqueWords.size(); i++) {
+            System.out.println(uniqueWords.get(i) + ": " + wordCounts.get(i));
+        }
+    }
+
 
     // Print out the current article list
     public void printArticle() {
+        int i = 0;
         for (String j : article) {
             System.out.printf(j + " ");
+            i++;
+            if (i == 10){
+                System.out.printf("\n");
+                i = 0;
+            }
         }
     }
 

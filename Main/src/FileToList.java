@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FileToList {
 
-    // Reads a file and returns an ArrayList of lowercase words and punctuation
+
     public ArrayList<String> readFileToList(String path) throws IOException {
         ArrayList<String> list = new ArrayList<>();
 
