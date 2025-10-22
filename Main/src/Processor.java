@@ -7,8 +7,10 @@ class Processor {
     private ArrayList<String> stopwords;
     private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
     private String file;
+    private String articleName;
 
-    public Processor(String file) throws IOException {
+    public Processor(String articleName, String file) throws IOException {
+        this.articleName = articleName;
         this.file = file;
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
@@ -64,14 +66,14 @@ class Processor {
 
         //Prints the count of words in an article
         int wordCount = article.size();
-        System.out.println("Word count: " + wordCount);
+        System.out.println(articleName + ": Word count: " + wordCount);
 
         //Prints the amount of uniqueWords
         int uniqueWordCount = uniqueWords.size();
-        System.out.println("Count of unique words: " + uniqueWordCount);
+        System.out.println(articleName + ": Count of unique words: " + uniqueWordCount);
 
         // Prints words ranked by frequency
-        System.out.println("Frequency of each word: ");
+        System.out.println(articleName + ": Frequency of each word: ");
         for (int i = 0; i < uniqueWords.size(); i++) {
             System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));
         }

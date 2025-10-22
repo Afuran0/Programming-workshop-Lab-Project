@@ -1,0 +1,122 @@
+How This A.I. Company Collapsed Amid Silicon Valley’s Biggest Boom
+Builder.ai went from a value of $1.5 billion to zero in a few months, amid questions over the sales of an A.I. product. Its downfall hints at a broader downturn.
+Builder.ai was a buzzy artificial intelligence company with a media-savvy chief executive, prestigious investors on three continents, a partnership with Microsoft and a supposedly vibrant business making apps for small businesses.
+
+Two years ago, Fast Company magazine ranked Builder the third most innovative company in A.I., right behind OpenAI and Google’s DeepMind.
+
+Last winter, it all went south. Builder’s board discovered that sales had been significantly overstated. The chief executive resigned. Within a few months, Builder, which was based in London and had operations in India and California, went from a $1.5 billion unicorn to bankruptcy. It is now being liquidated in a Delaware court.
+
+“Builder should be a warning sign for investors, for employees, for executives,” said Manpreet Ratia, who was brought in as chief executive in March to try to salvage the company. “Be careful of what you claim you are. At some point, it catches up with you.”
+
+Thanks to the dream of artificial intelligence, Silicon Valley is experiencing its biggest boom ever. Companies are pushing the technology as the savior of humanity. It will be your boss, your employee, your teacher, your best friend, your therapist. The tech community is stoked with an urgency bordering on panic. If the world is utterly changing right at this moment, there’s not a moment to lose.
+
+Builder’s collapse has gone largely unnoticed amid the frenzy. It is the biggest A.I. company to crater, although whether it should have been called an A.I. company at all is up for debate. Artificial intelligence is an ambiguous term. Attaching the A.I. label to a start-up can involve a considerable degree of hope and presumption, and sometimes outright deception.
+
+Earlier this year, the Securities and Exchange Commission charged a San Francisco couple with fraud, saying they had duped investors in their A.I. chat company. In New York, prosecutors charged an entrepreneur with defrauding investors in his shopping app, whose A.I. turned out to be contractors in the Philippines.
+
+“Fake A.I. has long been pervasive in Silicon Valley, but with the bubble it’s really taken off,” said David Gerard, who runs the popular debunking site Pivot to A.I. “If you want funding, you just say a bunch of A.I. words — ‘machine learning’ and ‘large language models’ and ‘This is the future.’ You don’t have to actually have A.I.”
+
+Builder, founded in 2016 as Engineer.ai, provided a platform where businesses could go to get apps and other software tools built for them. For the first few years, it did not do a hard sell on artificial intelligence. Sachin Dev Duggal, the chief executive, used 150 words to promote the company in 2018 when it got its first big venture investment. “A.I.” wasn’t among them.
+
+That year, there were fewer than 15,000 web addresses ending with “.ai.” Originally developed for the Caribbean island of Anguilla, the .ai top-level domain has become popular with start-ups that want to imply they understand artificial intelligence.
+
+About 1,500 .ai addresses were created every day this summer, according to Domain Name Stat. At the current pace, the total number of .ai addresses will pass one million by Thanksgiving. By rough comparison, the number of online ventures founded in the late 1990s dot-com era is estimated at 10,000.
+
+Builder’s fourth — and what turned out to be last — funding round was led by the Qatar Investment Authority, a sovereign wealth fund, in 2023. This time, the third word of the news release, right after the company’s name, was A.I.
+
+Investors poured a total of $450 million into the company. Besides Qatar, they included SoftBank’s DeepCore incubator, Microsoft, the Hollywood investor Jeffrey Katzenberg, the Palo Alto Networks chief executive Nikesh Arora and the New York venture firm Insight Partners. None would comment for this article.
+
+Builder.ai marketed itself by saying it could make building a website or an app as easy as ordering a pizza.Credit...Stefani Reynolds/Bloomberg
+‘It’s Basically Magic’
+Builder’s strategy was to become so ubiquitous as to seem inevitable.
+
+For all the supposed life-changing nature of A.I., what often drives success is old-fashioned publicity. “In the A.I. chatbot race, consistent media coverage isn’t just noise — it’s fuel for adoption and growth,” One Little Web, a Bangladeshi consultancy, recently said in announcing its latest study.
+
+Builder took the notion to heart. It poured money not into product development, but into promotion. Last fall, the company was at the Web Summit conference in Lisbon. It was a Gold Partner, the second highest level of partnership, at the TechCrunch Disrupt conference in San Francisco. It was at the Gitex Global conference in Dubai.
+
+At these events, the company showcased “Natasha,” which it called the first A.I. program manager. The product was designed to make building a website or an app as easy as ordering a pizza. Tell Natasha what you want, and she will create it.
+
+“I know what you’re saying: How’s all this even possible?” Natasha asked in an ad. Then she whispered: “It’s basically magic.”
+
+In 2024, as the A.I. frenzy swelled, Builder spent about $42 million on promoting itself, or 80 percent of its revenue, according to internal documents reviewed by The New York Times. Brand spending quadrupled during the year as the number of employees rose to 1,500.
+
+Mr. Duggal, the chief executive, called himself Builder’s “chief wizard.” He was a familiar figure at conferences and on television wearing his lucky sweater, a memorable multihued effort that reinforced his personal brand.
+
+He spoke confidently about the global liberation that A.I. would offer. “What you’re seeing with A.I. is a shift that is allowing the more creative part of human nature to kick in,” he said in a 2023 CNBC interview. He declined to be interviewed for this article and his public relations team did not provide a comment.
+
+Sachin Dev Duggal, the founder of Builder.ai, at the Web Summit Qatar in 2024.Credit...Stephen McCarthy/Sportsfile
+Software programming used to be laborious and highly skilled work, something that could be done only by trained coders. The notion that you can create software without programming is called “no code coding” or, in a newly coined term, “vibe coding.” You simply trust the A.I.
+
+The magic worked on some media. Fast Company’s ranking of Builder as the third most innovative company in A.I. put it six spots ahead of Nvidia, now the most highly valued company in the world. Fast Company said that while there was a small entry fee, the companies were judged on the basis of their applications.
+
+Fast Company commended Builder for cementing “a new partnership with JPMorgan Chase to sell Builder products to the financial services giant’s customer bases.” A spokeswoman for the bank said Builder was never a vendor. A Fast Company spokeswoman called Builder’s selection “unfortunate.”
+
+In 2024, Mr. Duggal received the EY Entrepreneur of the Year Award in Britain. The award, the organizers said, was given to those who demonstrate “courage, perseverance and resilience to overcome significant obstacles.”
+
+Mr. Duggal then competed in the global competition, which is accompanied by Academy Award-type glitz. He did not win. An EY spokeswoman declined to comment.
+
+‘Smoke and Mirrors’
+Mr. Duggal, who is British, was a serial entrepreneur who began 20 years ago with desktop visualization software, created a photo-sharing app and then in 2016 founded Engineer.ai. In 2018, he brought in an American executive, Robert Holdheim, to run the business.
+
+Mr. Holdheim lasted only a few months. In February 2019, he filed suit in Los Angeles against Engineer.ai and Mr. Duggal, saying he had been fired for pointing out problems at the start-up.
+
+The lawsuit said the company had two sets of books, one with fake numbers for investors, one with the real numbers. Engineer.ai had only a handful of customers, and most were unhappy with the product, the suit said. Drawing explicit comparisons to Elizabeth Holmes and her medical start-up, Theranos, Mr. Holdheim said in his lawsuit that the start-up was all “smoke and mirrors.”
+
+Mr. Holdheim said in his suit that he had confronted Mr. Duggal on this point. The chief executive responded, he said, by saying everyone did it.
+
+“Every tech start-up exaggerates to get financing — it’s the money that allows us to develop the technology,” Mr. Duggal was quoted as saying.
+
+The lawsuit also claimed that Mr. Duggal had scorned the traditional frugality of start-ups in favor of a lavish lifestyle at company expense, including importing a personal chef from Greece during a visit to Los Angeles.
+
+Engineer.ai denied the accusations. In October 2019, the company rebranded as Builder.ai. Mr. Holdheim said he had received a settlement, the terms of which are not public. Neither the lawsuit nor a 2019 Wall Street Journal article poking holes in Builder’s A.I. capabilities dented the company’s rise over the next few years. Mr. Holdheim declined to comment.
+
+One factor helping Builder along was the Covid pandemic and its restrictions.
+
+“Normally when you invest, you spend time with the business,” said Mr. Ratia, the current chief executive. “Covid made that impossible. The Builder.ai story took off during the pandemic.”
+
+“Builder should be a warning sign for investors, for employees, for executives,” said Manpreet Ratia, who was brought in as chief executive in February.Credit...Amrita Chandradas for The New York Times
+In 2023, Microsoft invested $30 million in Builder. Microsoft said the collaboration would bring the “combined power of both companies to businesses around the world.” Builder’s small business clients would use Microsoft’s cloud storage.
+
+A Microsoft spokeswoman said the company “doesn’t have anything to share at this time.”
+
+Last winter, Builder’s board, trying to determine why the company had little cash despite supposedly fast growth, found that revenue was drastically overstated, according to internal documents and two people who spoke about the finances on the condition of anonymity because of legal sensitivities.
+
+The company’s revenue for the 2023 fiscal year was reported as $157 million but was actually $42 million, according to one of the people and the internal documents. In the 2024 fiscal year, the gap widened, with reported revenue of $217 million against $51 million in reality. Builder also was not paying its bills. It owed Amazon Web Services $75 million, the person said.
+
+After the board investigation, Mr. Duggal stepped down. Mr. Ratia, who works for an early Builder investor, Jungle Ventures, had plans to fix the company. But when the creditors lost faith, filing for Chapter 7 bankruptcy was the only option.
+
+“I’m the only one left standing,” Mr. Ratia said.
+
+Builder.ai showcased its product, Natasha, at the World Economic Forum in Davos, Switzerland, in 2017.Credit...Andy Barton/Sopa Images, via LightRocket, via Getty Images
+In May, a social media account with no apparent connection to Builder posted that the company’s A.I. did not exist: “The Natasha neural network turned out to be 700 Indian programmers.” The accusation, which was widely circulated, sparked an instant joke in the tech community: At Builder, “A.I.” meant “Actually, Indians.”
+
+Mr. Ratia, a Builder board member since early 2024, pushed back on the accusation.
+
+“The A.I. was real,” he wrote on LinkedIn in June. “It wasn’t a gimmick. It wasn’t smoke and mirrors. It was a sophisticated, production-grade system.” His defense made little headway.
+
+In an interview, Mr. Ratia said the confusion was at least partly Builder’s fault.
+
+“Builder didn’t do a good job in defining A.I.,” he said. “Depending on your audience, you tend to overmarket yourself a bit. Was A.I. being used to assist the work of human beings? Yes. Was A.I. replacing human beings? No.”
+
+Since OpenAI introduced ChatGPT in 2022 and created a sensation, the pressure — or perhaps the temptation — for companies to describe something as artificial intelligence is often irresistible.
+
+“A.I. sells, and automation does not,” Mr. Ratia said.
+
+More Magic
+As Builder was unraveling, the final moments of Nate, a New York A.I. start-up, also played out.
+
+Nate was a shopping app that streamlined purchases by letting users skip the process of checking out on e-commerce sites. Thanks to A.I., shopaholics would save valuable minutes each day. Investors ponied up $40 million in spring 2020, just as the pandemic was making it seem all shopping would be virtual.
+
+Albert Saniger, Nate’s chief executive, told investors that the company’s “deep learning models” used a mix of “long short-term memory, natural language processing and reinforcement learning.” Nate described itself as “the magic shopping app.”
+
+In 2022, the tech news site The Information published an article that said Nate was not using A.I. at all but having contractors in the Philippines manually complete each sale. That attracted the interest of regulators.
+
+In April, the U.S. attorney’s office for the Southern District of New York indicted Mr. Saniger on fraud charges, saying he lied to investors about the use of A.I. Court records do not list a plea or a defense lawyer. Mr. Saniger, a partner at the New York venture firm Buttercore, did not return a request for comment.
+
+Another A.I. case is slowly moving forward in the U.S. District Court in San Francisco. In January, the Securities and Exchange Commission charged Alexander Beckman, who ran an A.I. sports chat company called GameOn, and his wife, Valerie Lau Beckman, a lawyer who worked for a venture capital firm, with fraud.
+
+Prosecutors described in court filings a “brazen and wide-ranging” scheme that included fabricated audit reports, fake bank statements, fake revenue, stolen identities and the diversion of millions of GameOn dollars to pay personal expenses, including the couple’s wedding and their house.
+
+Investors lost at least $60 million, the government said. Mr. Beckman and Ms. Lau Beckman pleaded not guilty. Their lawyers did not respond to requests for comment.
+
+Builder, meanwhile, is being investigated by prosecutors for the Southern District of New York, three people with knowledge of the company said. A spokesman for the prosecutors did not return a call for comment.

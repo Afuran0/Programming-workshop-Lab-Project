@@ -1,0 +1,73 @@
+A.I. Is Changing How Silicon Valley Builds Start-Ups. Tech start-ups typically raised huge sums to hire armies
+of workers and grow fast. Now artificial intelligence tools are making workers more productive and spurring tales of “tiny team” success.
+Almost every day, Grant Lee, a Silicon Valley entrepreneur, hears from investors who try to persuade him to take their money. Some have even sent him and his co-founders personalized gift baskets.
+
+Mr. Lee, 41, would normally be flattered. In the past, a fast-growing start-up like Gamma, the artificial intelligence start-up he helped establish in 2020, would have constantly looked out for more funding.
+
+But like many young start-ups in Silicon Valley today, Gamma is pursuing a different strategy. It is using artificial intelligence tools to increase its employees’ productivity in everything from customer service and marketing to coding and customer research.
+
+That means Gamma, which makes software that lets people create presentations and websites, has no need for more cash, Mr. Lee said. His company has hired only 28 people to get “tens of millions” in annual recurring revenue and nearly 50 million users. Gamma is also profitable.
+
+“If we were from the generation before, we would easily be at 200 employees,” Mr. Lee said. “We get a chance to rethink that, basically rewrite the playbook.”
+
+The old Silicon Valley model dictated that start-ups should raise a huge sum of money from venture capital investors and spend it hiring an army of employees to scale up fast. Profits would come much later. Until then, head count and fund-raising were badges of honor among founders, who philosophized that bigger was better.
+
+But Gamma is among a growing cohort of start-ups, most of them working on A.I. products, that are also using A.I. to maximize efficiency. They make money and are growing fast without the funding or employees they would have needed before. The biggest bragging rights for these start-ups are for making the most revenue with the fewest workers.
+
+Stories of “tiny team” success have now become a meme, with techies excitedly sharing lists that show how Anysphere, a start-up that makes the coding software Cursor, hit $100 million in annual recurring revenue in less than two years with just 20 employees, and how ElevenLabs, an A.I. voice start-up, did the same with around 50 workers
+
+The potential for A.I. to let start-ups do more with less has led to wild speculation about the future. Sam Altman, the chief executive of OpenAI, has predicted there could someday be a one-person company worth $1 billion. His company, which is building a cost-intensive form of A.I. called a foundational model, employs more than 4,000 people and has raised more than $20 billion in funding. It is also in talks to raise more money.
+
+Sam Altman, the chief executive of OpenAI, has predicted there could someday be a one-person company worth $1 billion.Credit...Aurelien Morissard/Agence France-Presse — Getty Images
+With A.I. tools, some start-ups are now declaring that they will stop hiring at a certain size. Runway Financial, a finance software company, has said it plans to top out at 100 employees because each of its workers will do the work of 1.5 people. Agency, a start-up using A.I. for customer service, also plans to hire no more than 100 workers.
+
+“It’s about eliminating roles that are not necessary when you have smaller teams,” said Elias Torres, Agency’s founder.
+
+The idea of A.I.-driven efficiency was bolstered last month by DeepSeek, the Chinese A.I. start-up that showed it could build A.I. tools for a small fraction of the typical cost. Its breakthrough, built on open source tools that are freely available online, set off an explosion of companies building new products using DeepSeek’s inexpensive techniques.
+
+“DeepSeek was a watershed moment,” said Gaurav Jain, an investor at the venture firm Afore Capital, which has backed Gamma. “The cost of compute is going to go down very, very fast, very quickly.”
+
+Editors’ Picks
+
+Do Heat Pumps Work When It Gets Really Cold?
+
+Wine, Cheese and ChatGPT: Ladies’ Night in San Francisco
+
+DeepSeek, the Chinese A.I. start-up that showed it could build A.I. tools for a small fraction of the typical cost.Credit...Caroline Brehman/EPA, via Shutterstock
+Mr. Jain compared new A.I. start-ups to the wave of companies that arose in the late 2000s, after Amazon began offering cheap cloud computing services. That lowered the cost of starting a company, leading to a flurry of new start-ups that could be built more cheaply.
+
+Before this A.I. boom, start-ups generally burned $1 million to get to $1 million in revenue, Mr. Jain said. Now getting to $1 million in revenue costs one-fifth as much and could eventually drop to one-tenth, according to an analysis of 200 start-ups conducted by Afore.
+
+“This time we’re automating humans as opposed to just the data centers,” Mr. Jain said.
+
+But if start-ups can become profitable without spending much, that could become a problem for venture capital investors, who allocate tens of billions to invest in A.I. start-ups. Last year, A.I. companies raised $97 billion in funding, making up 46 percent of all venture investment in the United States, according to PitchBook, which tracks start-ups.
+
+“Venture capital only works if you get money into the winners,” said Terrence Rohan, an investor with Otherwise Fund, which focuses on very young start-ups. He added, “If the winner of the future needs a lot less money because they’ll have a lot less people, how does that change V.C.?”
+
+For now, investors continue to fight to get into the hottest companies, many of which have no need for more money. Scribe, an A.I. productivity start-up, grappled last year with far more interest from investors than the $25 million it wanted to raise.
+
+“It was a negotiation of what is the smallest amount we could possibly take on,” said Jennifer Smith, Scribe’s chief executive. She said investors were shocked at the size of her staff — 100 people — when compared with its three million users and fast growth.
+
+Some investors are optimistic that A.I.-driven efficiency will spur entrepreneurs to create more companies, leading to more opportunities to invest. They hope that once the start-ups reach a certain size, the firms will adopt the old model of big teams and big money.
+
+Some young companies, including Anysphere, the one behind Cursor, are already doing that. Anysphere has raised $175 million in funding, with plans to add staff and conduct research, according to the company’s president, Oskar Schulz.
+
+Other founders have seen the perils of the old start-up playbook, which kept companies on a fund-raising treadmill where hiring more people created more costs that went beyond just their salaries.
+
+Bigger teams needed managers, more robust human resources and back office support. Those teams then needed specialized software, along with a bigger office with all the perks. And so on, which led start-ups to burn through cash and forced founders to constantly raise more money. Many start-ups from the funding boom of 2021 eventually downsized, shut down or scrambled to sell themselves.
+
+Turning a profit early on can change that outcome. At Gamma, employees use about 10 A.I. tools to help them be more efficient, including Intercom’s customer service tool for handling problems, Midjourney’s image generator for marketing, Anthropic’s Claude chatbot for data analysis and Google’s NotebookLM for analyzing customer research. Engineers also use Anysphere’s Cursor to more efficiently write code.
+
+Gamma’s product, which is built on top of tools from OpenAI and others, is also not as expensive to make as other A.I. products. (The New York Times has sued OpenAI and its partner, Microsoft, claiming copyright infringement of news content related to A.I. systems. The two companies have denied the suit’s claims.)
+
+Other efficient start-ups are taking a similar strategy. Thoughtly, a 10-person provider of A.I. phone agents, turned a profit in 11 months, thanks to its use of A.I., its co-founder Torrey Leonard said.
+
+The payment processor Stripe created an A.I. tool that helps Mr. Leonard analyze Thoughtly’s sales, something he would have previously hired an analyst to do. Without that and A.I. tools from others to streamline its operations, Thoughtly would need at least 25 people and be far from profitable, he said.
+
+Thoughtly will eventually raise more money, Mr. Leonard said, but only when it is ready. Not worrying about running out of cash is “a huge relief,” he said.
+
+At Gamma, Mr. Lee said he planned to roughly double the work force this year to 60, hiring for design, engineering and sales. He plans to recruit a different type of worker from before, seeking out generalists who do a range of tasks rather than specialists who do only one thing, he said. He also wants “player-coaches” instead of managers — people who can mentor less experienced employees but can also pitch in on the day-to-day work.
+
+Mr. Lee said the A.I.-efficient model had freed up time he would have otherwise spent managing people and recruiting. Now he focuses on talking to customers and improving the product. In 2022, he created a Slack room for feedback from Gamma’s top users, who are often shocked to discover that the chief executive was responding to their comments.
+
+“That’s actually every founder’s dream,” Mr. Lee said.
