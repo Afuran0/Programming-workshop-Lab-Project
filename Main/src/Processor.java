@@ -8,12 +8,18 @@ class Processor {
     private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
     private String file;
     private String articleName;
+    private int wordCount;
+    private int uniqueWordCount;
+    private ArrayList<String> top10WordFreq;
+    private ArrayList<Integer> top10Words;
+
 
     public Processor(String articleName, String file) throws IOException {
         this.articleName = articleName;
         this.file = file;
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
+
 
         // from the FiletoList class it takes the articleList to use here
         FileToList fileReader = new FileToList();
@@ -66,16 +72,24 @@ class Processor {
 
         //Prints the count of words in an article
         int wordCount = article.size();
+        this.wordCount = wordCount;
         System.out.println(articleName + ": Word count: " + wordCount);
 
         //Prints the amount of uniqueWords
         int uniqueWordCount = uniqueWords.size();
+        this.uniqueWordCount = uniqueWordCount;
         System.out.println(articleName + ": Count of unique words: " + uniqueWordCount);
 
         // Prints words ranked by frequency
         System.out.println(articleName + ": Frequency of each word: ");
+        this.top10WordFreq = new ArrayList<>();
+        this.top10Words = new ArrayList<>();
         for (int i = 0; i < uniqueWords.size(); i++) {
             System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));
+            if (i < 10){
+                top10WordFreq.add(uniqueWords.get(i));
+                top10Words.add(wordCounts.get(i));
+            }
         }
     }
 
@@ -98,5 +112,21 @@ class Processor {
         for (String k : stopwords) {
             System.out.println(k);
         }
+    }
+
+    public int getWordCount(){
+        return wordCount;
+    }
+
+    public int getUniqueWordCount(){
+        return uniqueWordCount;
+    }
+
+    public ArrayList<String> get10Freq(){
+        return top10WordFreq;
+    }
+
+    public ArrayList<Integer> get10Words(){
+        return top10Words;
     }
 }

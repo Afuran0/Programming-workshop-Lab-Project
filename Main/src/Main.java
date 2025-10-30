@@ -10,8 +10,8 @@ public class Main{
         ArrayList<String> articleFileNames = new ArrayList<>();
 
         String filename1 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
-        String filename2 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
-        String filename3 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
+        String filename2 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article2.txt";
+        String filename3 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article3.txt";
 
         articleFileNames.add(filename1);
         articleFileNames.add(filename2);
@@ -20,6 +20,8 @@ public class Main{
         for (int i = 0; i < 3; i++){
             articleList.add(new Processor(("Article" + i), articleFileNames.get(i)));
         }
+
         ArticleComparison AC = new ArticleComparison(articleList);
+        AC.repeatedWord();
     }
 }
