@@ -13,7 +13,7 @@ class Processor {
     private ArrayList<String> top10WordFreq;
     private ArrayList<Integer> top10Words;
 
-
+    //Constructor
     public Processor(String articleName, String file) throws IOException {
         this.articleName = articleName;
         this.file = file;
@@ -21,12 +21,12 @@ class Processor {
         stopwords = new ArrayList<>();
 
 
-        // from the FiletoList class it takes the articleList to use here
+        //From the FiletoList Class it takes the articleList to use here
         FileToList fileReader = new FileToList();
         article = fileReader.readFileToList(file);
         stopwords = fileReader.readFileToList(STOPFILENAME);
 
-        // removes stop words from article
+        //Removes stop words from article
         Iterator<String> iterator = article.iterator();
         while (iterator.hasNext()) {
             String articleWord = iterator.next();
@@ -114,6 +114,7 @@ class Processor {
         }
     }
 
+    //Getter methods
     public int getWordCount(){
         return wordCount;
     }
