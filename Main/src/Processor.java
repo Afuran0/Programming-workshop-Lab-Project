@@ -1,133 +1,102 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
+import java.util.stream.Collectors;
 
 class Processor {
     private ArrayList<String> article;
     private ArrayList<String> stopwords;
-    private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
+    private String STOPFILENAME = "C:\\Users\\danny\\OneDrive\\Desktop\\bluejprojects\\labproject\\stopwords.txt";
+    private String LEXICONFILE = "C:\\Users\\danny\\OneDrive\\Desktop\\bluejprojects\\labproject\\lexicon_scores.txt";
     private String file;
     private String articleName;
-    private int wordCount;
-    private int uniqueWordCount;
-    private ArrayList<String> top10WordFreq;
-    private ArrayList<Integer> top10Words;
+    private double vocabRichness;
 
-    //Constructor
     public Processor(String articleName, String file) throws IOException {
         this.articleName = articleName;
         this.file = file;
-        article = new ArrayList<>();
-        stopwords = new ArrayList<>();
+        this.article = new ArrayList<>();
+        this.stopwords = new ArrayList<>();
 
-
-        //From the FiletoList Class it takes the articleList to use here
         FileToList fileReader = new FileToList();
         article = fileReader.readFileToList(file);
         stopwords = fileReader.readFileToList(STOPFILENAME);
 
-        //Removes stop words from article
-        Iterator<String> iterator = article.iterator();
-        while (iterator.hasNext()) {
-            String articleWord = iterator.next();
-            if (stopwords.contains(articleWord)) {
-                iterator.remove();
-            }
-        }
+        // Remove stopwords
+        article.removeIf(stopwords::contains);
 
-        statistics(article);
+        // Compute richness
+        this.vocabRichness = computeVocabularyRichness(article);
+
+        // Print summary
+        printTopThree(article);
     }
 
-
-
-    //Method in processor that outputs word-count, unique word-count, and lists by frequency
-    public void statistics (ArrayList<String> wordsInArticle){
-        ArrayList<String> uniqueWords = new ArrayList<>();
-        ArrayList<Integer> wordCounts = new ArrayList<>();
-
-        // Loop through each word and count its frequency
-        for(String word : wordsInArticle) {
-            int index = uniqueWords.indexOf(word);
-            if (index != -1) {
-                wordCounts.set(index, wordCounts.get(index) + 1);
-            } else {
-                uniqueWords.add(word);
-                wordCounts.add(1);
-            }
+    private void printTopThree(ArrayList<String> wordsInArticle) {
+        Map<String, Integer> freqMap = new HashMap<>();
+        for (String word : wordsInArticle) {
+            freqMap.put(word, freqMap.getOrDefault(word, 0) + 1);
         }
-        // Sorts words by frequencies
-        for (int i = 0; i < wordCounts.size() - 1; i++) {
-            for (int j = 0; j < wordCounts.size() - i - 1; j++) {
-                if (wordCounts.get(j) < wordCounts.get(j + 1)) {
-                    int tempCount = wordCounts.get(j);
-                    wordCounts.set(j, wordCounts.get(j + 1));
-                    wordCounts.set(j + 1, tempCount);
 
-                    String tempWord = uniqueWords.get(j);
-                    uniqueWords.set(j, uniqueWords.get(j + 1));
-                    uniqueWords.set(j + 1, tempWord);
+        List<Map.Entry<String, Integer>> sorted = freqMap.entrySet()
+                .stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .collect(Collectors.toList());
+
+        int totalWords = wordsInArticle.size();
+        int uniqueWords = freqMap.size();
+
+        System.out.println("───────────────────────────────────────────────");
+        System.out.println("📄 " + articleName);
+        System.out.println("Total words (after stopword removal): " + totalWords);
+        System.out.println("Unique words: " + uniqueWords);
+        System.out.printf("Vocabulary richness score: %.2f%n", vocabRichness);
+        System.out.println("Top 3 most frequent words:");
+        System.out.println("-----------------------------------------------");
+
+        for (int i = 0; i < Math.min(3, sorted.size()); i++) {
+            Map.Entry<String, Integer> entry = sorted.get(i);
+            System.out.printf("%-15s → %d occurrences%n", entry.getKey(), entry.getValue());
+        }
+        System.out.println("───────────────────────────────────────────────\n");
+    }
+
+    private double computeVocabularyRichness(ArrayList<String> words) throws IOException {
+        Map<String, Double> lexiconScores = new HashMap<>();
+
+        try (Scanner sc = new Scanner(new File(LEXICONFILE))) {
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine().trim();
+                if (!line.isEmpty()) {
+                    String[] parts = line.split("\\s+");
+                    if (parts.length == 2) {
+                        String word = parts[0].toLowerCase();
+                        try {
+                            double score = Double.parseDouble(parts[1]);
+                            lexiconScores.put(word, score);
+                        } catch (NumberFormatException e) {
+                            // skip invalid entries
+                        }
+                    }
                 }
             }
         }
 
-        //Prints the count of words in an article
-        int wordCount = article.size();
-        this.wordCount = wordCount;
-        System.out.println(articleName + ": Word count: " + wordCount);
-
-        //Prints the amount of uniqueWords
-        int uniqueWordCount = uniqueWords.size();
-        this.uniqueWordCount = uniqueWordCount;
-        System.out.println(articleName + ": Count of unique words: " + uniqueWordCount);
-
-        // Prints words ranked by frequency
-        System.out.println(articleName + ": Frequency of each word: ");
-        this.top10WordFreq = new ArrayList<>();
-        this.top10Words = new ArrayList<>();
-        for (int i = 0; i < uniqueWords.size(); i++) {
-            System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));
-            if (i < 10){
-                top10WordFreq.add(uniqueWords.get(i));
-                top10Words.add(wordCounts.get(i));
+        double totalScore = 0.0;
+        int count = 0;
+        for (String w : words) {
+            if (lexiconScores.containsKey(w)) {
+                totalScore += lexiconScores.get(w);
+                count++;
             }
         }
+        return count == 0 ? 0.0 : totalScore / count; // average score
     }
 
-
-    // Print out the current article list
-    public void printArticle() {
-        int i = 0;
-        for (String j : article) {
-            System.out.printf(j + " ");
-            i++;
-            if (i == 10){
-                System.out.printf("\n");
-                i = 0;
-            }
-        }
+    public double getVocabRichness() {
+        return vocabRichness;
     }
 
-    // Test function to print stopwords
-    public void printStopWords() {
-        for (String k : stopwords) {
-            System.out.println(k);
-        }
-    }
-
-    //Getter methods
-    public int getWordCount(){
-        return wordCount;
-    }
-
-    public int getUniqueWordCount(){
-        return uniqueWordCount;
-    }
-
-    public ArrayList<String> get10Freq(){
-        return top10WordFreq;
-    }
-
-    public ArrayList<Integer> get10Words(){
-        return top10Words;
+    public String getArticleName() {
+        return articleName;
     }
 }
