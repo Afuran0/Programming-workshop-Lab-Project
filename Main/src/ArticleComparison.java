@@ -34,8 +34,11 @@ class ArticleComparison {
     }
 
     public void articleAttitude(){
+        int i = 0;
+        System.out.println("The Attitude Scores of each Article");
         for (Processor article: articleList){
-            System.out.println(article.articleScore());
+            i++;
+            System.out.println("Article " + i + " : " + article.articleScore());
         }
     }
 }

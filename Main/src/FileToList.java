@@ -29,35 +29,43 @@ public class FileToList {
     }
 
     //takes score files and turns it into a hashmap
+    //this is more directed towards the specific lexicon file for values
     public HashMap<String, Double> readFileToHashMap(String path) throws IOException {
-        HashMap<String, Double> list = new HashMap<>();
+        HashMap<String, Double> map = new HashMap<>();
+        File file = new File(path);
 
-        File text = new File(path);
-        try (Scanner sc = new Scanner(text)) {
+        //there was originally a lot of errors so I added the try catches
+        try (Scanner sc = new Scanner(file)) {
+
             while (sc.hasNextLine()) {
                 String line = sc.nextLine().trim();
-                if (line.isEmpty()) continue;            // skip blanks
+                if (line.isEmpty()) continue;
 
-                // Split on any whitespace (tabs or spaces)
+                //splits on white spaces
                 String[] parts = line.split("\\s+");
+
                 if (parts.length < 2) {
-                    System.out.println("Skipping malformed line: " + line);
+                    System.out.println("Skipping malformed line (not enough tokens): " + line);
                     continue;
                 }
 
-                String key = parts[0].toLowerCase();
-                String rawNumber = parts[1];             // e.g., "-1.9"
+                // Key = FIRST token only
+                // (Solution B keeps only the first token as the key)
+                String key = parts[0].toLowerCase().replace("\uFEFF", "");
+
+                // Value = last token (try to parse as number)
+                String valueStr = parts[parts.length - 1];
 
                 try {
-                    double value = Double.parseDouble(rawNumber);
-                    list.put(key, value);
+                    double value = Double.parseDouble(valueStr);
+                    map.put(key, value);
+
                 } catch (NumberFormatException e) {
-                    System.out.println("Invalid number on line: " + line);
+                    // No numeric value present → skip line
+                    System.out.println("Skipping no-score line: " + line);
                 }
             }
         }
-
-        return list;
+        return map;
     }
-
 }
