@@ -26,6 +26,7 @@ public class Main{
 
         //Objects and Inputs
         ArticleComparison AC = new ArticleComparison(articleList);
-        AC.repeatedWord();
+        AC.articleAttitude();
+
     }
 }

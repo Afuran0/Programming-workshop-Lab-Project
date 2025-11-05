@@ -32,4 +32,10 @@ class ArticleComparison {
             i = 0;
         }
     }
+
+    public void articleAttitude(){
+        for (Processor article: articleList){
+            System.out.println(article.articleScore());
+        }
+    }
 }

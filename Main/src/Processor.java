@@ -1,11 +1,14 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 class Processor {
     private ArrayList<String> article;
     private ArrayList<String> stopwords;
+    private HashMap<String, Double> wordScores;
     private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
+    private String SCOREFILE = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\lexicon_scores.txt";
     private String file;
     private String articleName;
     private int wordCount;
@@ -19,12 +22,14 @@ class Processor {
         this.file = file;
         article = new ArrayList<>();
         stopwords = new ArrayList<>();
+        wordScores = new HashMap<>();
 
 
         //From the FiletoList Class it takes the articleList to use here
         FileToList fileReader = new FileToList();
         article = fileReader.readFileToList(file);
         stopwords = fileReader.readFileToList(STOPFILENAME);
+        wordScores = fileReader.readFileToHashMap(SCOREFILE);
 
         //Removes stop words from article
         Iterator<String> iterator = article.iterator();
@@ -93,6 +98,16 @@ class Processor {
         }
     }
 
+    public int articleScore(){
+        int score = 0;
+        for (String word: article){
+            if (wordScores.containsKey(word)){
+                score += wordScores.get(word);
+            }
+        }
+        return score;
+    }
+
 
     // Print out the current article list
     public void printArticle() {
@@ -113,6 +128,7 @@ class Processor {
             System.out.println(k);
         }
     }
+
 
     //Getter methods
     public int getWordCount(){
