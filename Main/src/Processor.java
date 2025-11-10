@@ -40,7 +40,7 @@ class Processor {
             }
         }
 
-        statistics(article);
+        //statistics(article);
     }
 
 

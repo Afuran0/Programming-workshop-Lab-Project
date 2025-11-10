@@ -34,7 +34,7 @@ public class FileToList {
         HashMap<String, Double> map = new HashMap<>();
         File file = new File(path);
 
-        //there was originally a lot of errors so I added the try catches
+        //
         try (Scanner sc = new Scanner(file)) {
 
             while (sc.hasNextLine()) {
@@ -44,26 +44,14 @@ public class FileToList {
                 //splits on white spaces
                 String[] parts = line.split("\\s+");
 
-                if (parts.length < 2) {
-                    System.out.println("Skipping malformed line (not enough tokens): " + line);
-                    continue;
-                }
 
-                // Key = FIRST token only
-                // (Solution B keeps only the first token as the key)
+                // first word of each line turned to lowercase and saved as key, then takes the value and saves it as a string
+                //the string value is then turned into a double and both the key and value is added
                 String key = parts[0].toLowerCase().replace("\uFEFF", "");
-
-                // Value = last token (try to parse as number)
                 String valueStr = parts[parts.length - 1];
+                double value = Double.parseDouble(valueStr);
+                map.put(key, value);
 
-                try {
-                    double value = Double.parseDouble(valueStr);
-                    map.put(key, value);
-
-                } catch (NumberFormatException e) {
-                    // No numeric value present → skip line
-                    System.out.println("Skipping no-score line: " + line);
-                }
             }
         }
         return map;
