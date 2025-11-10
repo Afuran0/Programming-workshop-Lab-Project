@@ -26,6 +26,6 @@ Processor Methods:
 
 The ArticleComparison Class takes an arrayList of Processor objects which represent each article and uses certain methods to compare each article or list the highest preforming article. Its the class that gets used whenever something needs to be done with multiple articles at once.
 ArticleComparison Methods:
--richestVocab() - Prints the article with the most unique words, and how many it had
--repeatedWord() - Prints the top 10 most repeated words for each article
--articleAttitude() - Prints out the attitude score of each article based on their lexicon scores
+- richestVocab() - Prints the article with the most unique words, and how many it had
+- repeatedWord() - Prints the top 10 most repeated words for each article
+- articleAttitude() - Prints out the attitude score of each article based on their lexicon scores
