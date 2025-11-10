@@ -22,7 +22,7 @@ class ArticleComparison {
     }
 
     //Prints the Top 10 most repeated words of each article and their frequency
-    public void repeatedWord () {
+    public void repeatedWord() {
         int i = 0;
         for (Processor article: articleList){
             for (String s : article.get10Freq()){

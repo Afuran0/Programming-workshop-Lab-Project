@@ -40,7 +40,7 @@ class Processor {
             }
         }
 
-        //statistics(article);
+        statistics(article);
     }
 
 
@@ -98,6 +98,7 @@ class Processor {
         }
     }
 
+    //uses the hashmap of the lexicon scores to assign mood scores to the article
     public int articleScore(){
         int score = 0;
         for (String word: article){
@@ -147,3 +148,4 @@ class Processor {
         return top10Words;
     }
 }
+
