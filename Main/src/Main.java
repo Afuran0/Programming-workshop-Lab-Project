@@ -1,10 +1,15 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main{
 
     //Main class that will handle user inputs and articles to put into other classes
     public static void main(String[] args) throws IOException {
+
+        boolean running = true;
+        int choice = 0;
+        int num;
 
         ArrayList<Processor> articleList = new ArrayList<>();
         ArrayList<String> articleFileNames = new ArrayList<>();
@@ -26,7 +31,36 @@ public class Main{
 
         //Objects and Inputs
         ArticleComparison AC = new ArticleComparison(articleList);
-        AC.articleAttitude();
+
+        Scanner sc = new Scanner(System.in);
+        while (running){
+            System.out.println("\n\nWelcome to the File Manager");
+            System.out.println("--------------------------------");
+            System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Article Attitudes\n4. Exit\n");
+            System.out.println("Enter Your choice: ");
+
+            choice = sc.nextInt();
+            switch (choice){
+                case 1:
+                    System.out.println("Which Articles Stats Do You Want: ");
+                    num = sc.nextInt();
+                    articleList.get(num - 1).statistics(true, false);
+                    break;
+                case 2:
+                    System.out.println("Which Articles Frequencies Do You Want: ");
+                    num = sc.nextInt();
+                    articleList.get(num - 1).statistics(false, true);
+                    break;
+                case 3:
+                    AC.articleAttitude();
+                    break;
+                case 4:
+                    System.out.println("Exiting.");
+                    running = false;
+                default:
+                    break;
+            }
+        }
 
     }
 }

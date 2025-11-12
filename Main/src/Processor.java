@@ -40,15 +40,19 @@ class Processor {
             }
         }
 
-        statistics(article);
+        //run the stats method but dont print anything
+        //just so the values are set incase they are needed for other calc
+        statistics(false, false);
     }
 
 
 
     //Method in processor that outputs word-count, unique word-count, and lists by frequency
-    public void statistics (ArrayList<String> wordsInArticle){
+    public void statistics (boolean printStat, boolean printFreq){
         ArrayList<String> uniqueWords = new ArrayList<>();
         ArrayList<Integer> wordCounts = new ArrayList<>();
+        ArrayList<String> wordsInArticle = article;
+
 
         // Loop through each word and count its frequency
         for(String word : wordsInArticle) {
@@ -78,19 +82,23 @@ class Processor {
         //Prints the count of words in an article
         int wordCount = article.size();
         this.wordCount = wordCount;
-        System.out.println(articleName + ": Word count: " + wordCount);
 
         //Prints the amount of uniqueWords
         int uniqueWordCount = uniqueWords.size();
         this.uniqueWordCount = uniqueWordCount;
-        System.out.println(articleName + ": Count of unique words: " + uniqueWordCount);
+
+        if (printStat){
+            System.out.println(articleName + ": Word count: " + wordCount);
+            System.out.println(articleName + ": Count of unique words: " + uniqueWordCount);
+        }
+
 
         // Prints words ranked by frequency
-        System.out.println(articleName + ": Frequency of each word: ");
+        if (printFreq){System.out.println(articleName + ": Frequency of each word: ");}
         this.top10WordFreq = new ArrayList<>();
         this.top10Words = new ArrayList<>();
         for (int i = 0; i < uniqueWords.size(); i++) {
-            System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));
+            if (printFreq){System.out.println(uniqueWords.get(i) + " -- " + wordCounts.get(i));}
             if (i < 10){
                 top10WordFreq.add(uniqueWords.get(i));
                 top10Words.add(wordCounts.get(i));
