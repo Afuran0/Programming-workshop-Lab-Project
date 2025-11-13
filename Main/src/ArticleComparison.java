@@ -18,7 +18,9 @@ class ArticleComparison {
                 highest = article;
             }
         }
+        System.out.println("\n\n-----------------------------------------------------------------------\n");
         System.out.println("Article " + (articleList.indexOf(highest) + 1) + " has the richest vocab with " + highest.getUniqueWordCount() + " unique words");
+        System.out.println("\n-----------------------------------------------------------------------");
     }
 
     //Prints the Top 10 most repeated words of each article and their frequency

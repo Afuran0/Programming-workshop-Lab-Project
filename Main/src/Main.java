@@ -14,14 +14,13 @@ public class Main{
         ArrayList<Processor> topic1_articleList = new ArrayList<>();
         ArrayList<Processor> topic2_articleList = new ArrayList<>();
         ArrayList<Processor> topic3_articleList = new ArrayList<>();
+        ArrayList<ArticleComparison> acList = new ArrayList<>();
 
         ArrayList<ArrayList<Processor>> topicList = new ArrayList<>();
         topicList.add(topic1_articleList);
         topicList.add(topic2_articleList);
         topicList.add(topic3_articleList);
 
-
-        ArrayList<ArticleComparison> acList = new ArrayList<>();
 
         ArrayList<String> articleFileNames = new ArrayList<>();
 
@@ -50,26 +49,32 @@ public class Main{
 
 
         Scanner sc = new Scanner(System.in);
-        int topicChoice;
+        int topicChoice = 0;
         while (running){
-            System.out.println("\n\nWelcome to the File Manager");
-            System.out.println("What Topic Would you Like to Look At? (1, 2 or 3): ");
-            topicChoice = sc.nextInt();
+            System.out.println("\n\n--------------------------------");
+            System.out.println("Welcome to the Article Manager");
+            if (topicChoice != 0) {System.out.println("You are currently look at topic " + topicChoice + ".");}
+            else {
+                System.out.print("What Topic Would you Like to Look At? (1, 2 or 3): ");
+                topicChoice = sc.nextInt();
+            }
+
+
 
             System.out.println("--------------------------------");
-            System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Richest Vocab\n4. Most Repeated\n5. Article Attitudes\n6. Exit");
-            System.out.println("Enter Your choice: ");
+            System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Richest Vocab\n4. Most Repeated\n5. Article Attitudes\n6. Change Topic\n7. Exit\n");
+            System.out.print("Enter Your choice: ");
 
             choice = sc.nextInt();
 
             switch (choice){
                 case 1:
-                    System.out.println("Which Articles Stats Do You Want: ");
+                    System.out.print("Which Articles Stats Do You Want: ");
                     num = sc.nextInt();
                     topicList.get(topicChoice - 1).get(num - 1).statistics(true, false);
                     break;
                 case 2:
-                    System.out.println("Which Articles Frequencies Do You Want: ");
+                    System.out.print("Which Articles Frequencies Do You Want: ");
                     num = sc.nextInt();
                     topicList.get(topicChoice - 1).get(num - 1).statistics(false, true);
                     break;
@@ -83,6 +88,10 @@ public class Main{
                     acList.get(topicChoice - 1).articleAttitude();
                     break;
                 case 6:
+                    System.out.print("What Topic Would you Like to Look at?: ");
+                    topicChoice = sc.nextInt();
+                    break;
+                case 7:
                     System.out.println("Exiting.");
                     running = false;
                     break;
