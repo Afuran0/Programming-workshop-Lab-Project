@@ -100,10 +100,7 @@ public class Main {
                         System.out.print("Enter the path of your file: ");
                         fileAnswer = sc.nextLine();
 
-                        System.out.print("Enter the folder to store your file: ");
-                        folderAnswer = sc.nextLine();
-
-                        FileManager.AddFile(fileAnswer, folderAnswer);
+                        FileManager.AddFile(fileAnswer, "files");
 
 
                         int index = topicAnswer - 1;
@@ -122,7 +119,11 @@ public class Main {
                         System.out.println("Topic " + topicList.size() + " added successfully.");
                         break;
                 } }
-
+                System.out.println("--------------------------------");
+                System.out.println("Article Options:");
+                for (int i = 0; i < topicList.get(topicChoice - 1).size(); i++){
+                    System.out.println((i + 1) + " - " + topicList.get(topicChoice - 1).get(i).getName());
+                }
 
                 System.out.println("--------------------------------");
                 System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Richest Vocab\n4. Most Repeated\n5. Article Attitudes\n6. Change Topic\n7. Exit\n");
@@ -151,11 +152,12 @@ public class Main {
                         acList.get(topicChoice - 1).articleAttitude();
                         break;
                     case 6:
-                        System.out.print("What Topic Would you Like to Look at?: ");
-                        topicChoice = sc.nextInt();
+                        System.out.println("Returning");
+                        topicChoice = 0;
                         break;
                     case 7:
                         System.out.println("Exiting.");
+
                         running = false;
                         break;
                     default:

@@ -140,6 +140,9 @@ class Processor {
 
 
     //Getter methods
+    public String getName(){
+        return articleName;
+    }
     public int getWordCount(){
         return wordCount;
     }
