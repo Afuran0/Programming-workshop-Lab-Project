@@ -29,9 +29,9 @@ public class Main {
         ArrayList<String> articleFileNames = new ArrayList<>();
 
         //File names
-        String filename1 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article1.txt";
-        String filename2 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article2.txt";
-        String filename3 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\article3.txt";
+        String filename1 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\article1.txt";
+        String filename2 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\article2.txt";
+        String filename3 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\article3.txt";
 
         //Adds filenames to list
         articleFileNames.add(filename1);
@@ -98,7 +98,7 @@ public class Main {
                         topicList.add(new ArrayList<Processor>());
                         System.out.println("Topic " + topicList.size() + " added successfully.");
                         break;
-                }
+                } }
 
 
                 System.out.println("--------------------------------");
@@ -139,7 +139,7 @@ public class Main {
                         System.out.println("Please Enter a Valid Option (1-6).");
                         break;
                 }
-            }
+
 
         }
     }
