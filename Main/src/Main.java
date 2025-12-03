@@ -33,15 +33,38 @@ public class Main {
         String filename2 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\article2.txt";
         String filename3 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\article3.txt";
 
+        String filename4 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Politics1.txt";
+        String filename5 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Politics2.txt";
+        String filename6 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Politics3.txt";
+
+        String filename7 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Sports1.txt";
+        String filename8 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Sports2.txt";
+        String filename9 = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\Sports3.txt";
+
         //Adds filenames to list
         articleFileNames.add(filename1);
         articleFileNames.add(filename2);
         articleFileNames.add(filename3);
+        articleFileNames.add(filename4);
+        articleFileNames.add(filename5);
+        articleFileNames.add(filename6);
+        articleFileNames.add(filename7);
+        articleFileNames.add(filename8);
+        articleFileNames.add(filename9);
 
         //Creates a list of Processor objects
-        for (int i = 0; i < 3; i++) {
-            topic1_articleList.add(new Processor(("Article" + (i + 1)), articleFileNames.get(i)));
+        for (int i = 0; i < 9; i++) {
+            if (i < 3){
+                topic1_articleList.add(new Processor(("Article" + (i + 1)), articleFileNames.get(i)));
+            }
+            else if (i < 6){
+                topic2_articleList.add(new Processor(("Article" + (i + 1)), articleFileNames.get(i)));
+            }
+            else if (i < 9){
+                topic3_articleList.add(new Processor(("Article" + (i + 1)), articleFileNames.get(i)));
+            }
         }
+
 
         //Creates Comparison Classes for each of the three topics and adds them to one AC List
         ArticleComparison AC1 = new ArticleComparison(topic1_articleList);

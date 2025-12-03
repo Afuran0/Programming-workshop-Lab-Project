@@ -7,8 +7,8 @@ class Processor {
     private ArrayList<String> article;
     private ArrayList<String> stopwords;
     private HashMap<String, Double> wordScores;
-    private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\stopwords.txt";
-    private String SCOREFILE = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\Main\\lexicon_scores.txt";
+    private String STOPFILENAME = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\stopwords.txt";
+    private String SCOREFILE = "C:\\Users\\Bally\\OneDrive\\Desktop\\Programming\\JavaWorkshop\\JavaIDEA\\Programming-workshop-Lab-Project\\files\\lexicon_scores.txt";
     private String file;
     private String articleName;
     private int wordCount;
