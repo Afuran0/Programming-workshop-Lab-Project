@@ -12,7 +12,6 @@ public class Main {
         int choice1 = 0;
         int num;
         String fileAnswer = " ";
-        String folderAnswer = " ";
         int topicAnswer = 0;
 
         ArrayList<Processor> topic1_articleList = new ArrayList<>();
@@ -78,13 +77,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int topicChoice = 0;
         while (running) {
-            System.out.println("\n\n--------------------------------");
-            System.out.println("Welcome to the Article Manager");
+            System.out.println("\n\n-----------------------------------------------\n");
+            System.out.println("        Welcome to the Article Manager");
             if (topicChoice != 0) {
-                System.out.println("You are currently look at topic " + topicChoice + ".");
+                System.out.println("       You are currently look at topic " + topicChoice + ".");
             } else {
                 System.out.println("\n------------------FileManager------------------");
                 System.out.print("1. Select Topic\n2. Add File\n3. Add Topic \n");
+                System.out.println("-----------------------------------------------");
+                System.out.print("Enter your choice: ");
                 choice1 = sc.nextInt();
 
                 switch (choice1) {
@@ -107,26 +108,32 @@ public class Main {
 
                         while (index >= topicList.size()) {
                             topicList.add(new ArrayList<Processor>());
-                            acList.add(new ArticleComparison(topicList.get(topicList.size()-1)));
+                            acList.add(new ArticleComparison(topicList.get(topicList.size() - 1)));
                             System.out.println("Automatically created new topic: " + topicList.size());
                         }
 
-                        topicList.get(index).add(new Processor("Article", fileAnswer));
+                        String newName = "Article" + (topicList.get(index).size() + 1);
+                        topicList.get(index).add(new Processor(newName, fileAnswer));
                         System.out.println("File added to topic " + topicAnswer + ".");
                         break;
                     case 3:
                         topicList.add(new ArrayList<Processor>());
                         System.out.println("Topic " + topicList.size() + " added successfully.");
                         break;
-                } }
-                System.out.println("--------------------------------");
+                }
+            }
+            if (topicChoice != 0) {
+
+                System.out.println("-----------------------------------------------");
                 System.out.println("Article Options:");
-                for (int i = 0; i < topicList.get(topicChoice - 1).size(); i++){
+                for (int i = 0; i < topicList.get(topicChoice - 1).size(); i++) {
                     System.out.println((i + 1) + " - " + topicList.get(topicChoice - 1).get(i).getName());
                 }
 
-                System.out.println("--------------------------------");
-                System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Richest Vocab\n4. Most Repeated\n5. Article Attitudes\n6. Change Topic\n7. Exit\n");
+                System.out.println("-----------------------------------------------");
+                System.out.println("What do you want to look at?");
+                System.out.print("1. Article Statistics \n2. Word Frequencies \n3. Richest Vocab\n4. Most Repeated\n5. Article Attitudes\n6. Back to File Manager\n7. Exit\n");
+                System.out.println("-----------------------------------------------");
                 System.out.print("Enter Your choice: ");
 
                 choice = sc.nextInt();
@@ -135,12 +142,24 @@ public class Main {
                     case 1:
                         System.out.print("Which Articles Stats Do You Want: ");
                         num = sc.nextInt();
-                        topicList.get(topicChoice - 1).get(num - 1).statistics(true, false);
+                        System.out.print("\n\n");
+                        int max = topicList.get(topicChoice - 1).size();
+                        if (num >= 1 && num <= max) {
+                            topicList.get(topicChoice - 1).get(num - 1).statistics(true, false);
+                        } else {
+                            System.out.println("Please enter a valid article number (1-" + max + ").");
+                        }
+
                         break;
                     case 2:
                         System.out.print("Which Articles Frequencies Do You Want: ");
                         num = sc.nextInt();
-                        topicList.get(topicChoice - 1).get(num - 1).statistics(false, true);
+                        int max1 = topicList.get(topicChoice - 1).size();
+                        if (num >= 1 && num <= max1) {
+                            topicList.get(topicChoice - 1).get(num - 1).statistics(false, true);
+                        } else {
+                            System.out.println("Please enter a valid article number (1-" + max1 + ").");
+                        }
                         break;
                     case 3:
                         acList.get(topicChoice - 1).richestVocab();
@@ -152,20 +171,18 @@ public class Main {
                         acList.get(topicChoice - 1).articleAttitude();
                         break;
                     case 6:
-                        System.out.println("Returning");
+                        System.out.println("Returning to FileManager");
                         topicChoice = 0;
                         break;
                     case 7:
                         System.out.println("Exiting.");
-
                         running = false;
                         break;
                     default:
-                        System.out.println("Please Enter a Valid Option (1-6).");
+                        System.out.println("Please Enter a Valid Option (1-7).");
                         break;
                 }
-
-
+            }
         }
     }
 }
