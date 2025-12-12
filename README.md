@@ -7,8 +7,8 @@ Daniel Chavez
 
 UML Diagram:
 
+<img width="2006" height="1151" alt="image" src="https://github.com/user-attachments/assets/2d626231-650b-41e9-b1cd-aefc35db9201" />
 
-<img width="2053" height="1151" alt="image" src="https://github.com/user-attachments/assets/921b329e-ff37-4f4b-b739-43c1d69ca527" />
 
 
 
