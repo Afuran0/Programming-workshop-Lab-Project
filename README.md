@@ -13,22 +13,29 @@ UML Diagram:
 
 
 
-- The Main class is used to run the program and create a processor object and input a file path into the processor instance.
+- The Main class is used to run the program and manages the uses of all the other classes. It creates and groups processor objects into topics and ArticleComparison objects and then handles the user's inputs in the UI.
 
-- The Processor class then takes that file and calls the FiletoList class to take the file and break it down word by word and add each word as an element in an ArrayList, it also takes the lexicon score file and turns it into a Hashmap with each word being a key and each number being a value.
-
-The Processor Class then takes the ArrayList and removes stopwords
+- The Processor class then takes that file and calls the FiletoList class to get the files converted into collections. The Processor Class then takes the ArrayList and removes stopwords and uses the modified list to calculate information on the article. 
 Processor Methods:
-- statistics() takes the ArrayList of the article and prints out statistics like workcount, uniquewordcount and wordfrequency
-- articleScore() takes a hashmap created from FileToList of the lexicon scores and if a word is in the hashmap it adds the score to the article
+- statistics() takes the ArrayList of the article and creates statistics like wordcount, uniquewordcount and wordfrequency, which can be printed using boolean inputs based on the user's desire.
+- articleScore() uses the lexicon HashMap from FileToList and if a word is in the HashMap it adds the score to the article
 - printArticle() and printStopWords() methods were put for testing and they just print out the ArrayList elements of stopwords or the ArrayList elements of the article
 - getWordCount(), getUniqueWordCount(), get10Freq(), and get10Words(), are all just getter methods so we can access the values from the ArticleComparison Class
 
-The ArticleComparison Class takes an arrayList of Processor objects which represent each article and uses certain methods to compare each article or list the highest preforming article. Its the class that gets used whenever something needs to be done with multiple articles at once.
+The ArticleComparison Class takes an arrayList of Processor objects which represent each article and uses certain methods to compare each article or list the highest performing article. Its the class that gets used whenever something needs to be done with multiple articles at once.
 ArticleComparison Methods:
 - richestVocab() - Prints the article with the most unique words, and how many it had
 - repeatedWord() - Prints the top 10 most repeated words for each article
 - articleAttitude() - Prints out the attitude score of each article based on their lexicon scores
+
+The FileToList Class takes a path for a file and converts it into a collection (either arrayList or Hashmap) and outputs it back to the Processor Class
+-readFileToList() - reads a txt file, removes puncuation, splits it into individual words, converts the words to lowercase, and returns it as an ArrayList of strings
+-readFileToHashMap - reads the lexicon file, removes puncuation, splits it into individual words and a score, converts the words to lowercase, and returns it as a HashMap of strings as the key and doubles as the value
+
+The FileManager Class is responsible for handling files that the user wants to add to the system.
+-AddFile() - moves a file from a user-inputed path into the project’s article folder. It also creates the target folder if it does not already exist. 
+
+
 
 Code Quality - 
 
