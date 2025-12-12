@@ -12,6 +12,22 @@ UML Diagram:
 
 
 
+Testing Results:
+
+<img width="3071" height="1826" alt="Screenshot 2025-12-11 195452" src="https://github.com/user-attachments/assets/6c9c0815-7408-433f-93a0-62bd005d6bfb" />
+
+<img width="3071" height="1817" alt="Screenshot 2025-12-11 195533" src="https://github.com/user-attachments/assets/0686bab3-6219-4082-8825-3bf08479df26" />
+
+<img width="3071" height="1773" alt="Screenshot 2025-12-11 195556" src="https://github.com/user-attachments/assets/64e8770a-062b-4e9c-a86f-1102c1fb39d1" />
+
+<img width="3070" height="1815" alt="Screenshot 2025-12-11 195647" src="https://github.com/user-attachments/assets/571bc116-9aad-4b33-9513-2e95e6cdf32c" />
+
+<img width="3071" height="1827" alt="Screenshot 2025-12-11 195706" src="https://github.com/user-attachments/assets/baf6459e-6006-45f0-af34-d4087748ddf7" />
+
+<img width="3071" height="1822" alt="Screenshot 2025-12-11 195809" src="https://github.com/user-attachments/assets/c42d08d4-f9e8-4904-8833-a0205d41b4c1" />
+
+<img width="3071" height="1083" alt="Screenshot 2025-12-11 195848" src="https://github.com/user-attachments/assets/0b66023f-c7da-4ecb-bb0b-84fa3adf2b85" />
+
 The Main class is used to run the program and manages the uses of all the other classes. It creates and groups Processor objects into topics and ArticleComparison objects and then handles the user's inputs in the UI.
 
 The Processor class then takes that file and calls the FileToList class to get the files converted into collections. The Processor class then takes the ArrayList and removes stopwords and uses the modified list to calculate information on the article.
